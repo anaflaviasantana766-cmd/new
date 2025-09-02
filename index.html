@@ -37,10 +37,14 @@
         .book-title{font-size:12px;line-height:1.35;margin:6px 0;text-align:left;font-weight:600;}
         .cta-left{display:inline-block;margin-top:2px;}
         /* Destaque do vídeo */
-        .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:flex;align-items:center;gap:6px;}
-        .highlight-title img{width:18px;height:18px;}
+        .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:inline-block;}
+        .highlight-title img{width:18px;height:18px;vertical-align:top;margin-right:6px;}
         .video-title{display:inline;font-weight:700;}
         .avatar{width:48px;height:48px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:8px;object-fit:cover;}
+        /* Estilo para thumbnail do vídeo */
+        .video-thumbnail-wrap{position:relative;display:inline-block;max-width:100%;margin:12px 0;}
+        .video-thumbnail{max-width:100%;height:auto;border-radius:8px;}
+        .play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:50px;background:url('https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/play-icon.png') no-repeat center;background-size:contain;}
         /* Aconteceu */
         .news-wrap{background:#D8D8D8;max-width:560px;margin:6px 0 24px 16px;border-radius:20px;padding:16px;}
         .news-title-center{text-align:center;margin:0;}
@@ -58,6 +62,11 @@
             .transition-img{max-width:100% !important;}
             /* Quadrado preto menor no celular */
             .inverted-imgcell{width:140px !important;height:140px !important;}
+            /* Thumbnail do vídeo */
+            .video-thumbnail-wrap{max-width:100% !important;}
+            .play-icon{width:40px !important;height:40px !important;}
+            /* GIF no mobile */
+            .highlight-title img{width:14px !important;height:14px !important;max-width:100% !important;}
             /* Notícias */
             .news-img{width:120px !important;}
             .spacer-4{width:4px !important;}
@@ -175,8 +184,11 @@
                 <h1 class="video-title">Dias Perfeitos — por Juliano Jacob <img class="avatar" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/juliano.png" alt="Juliano" width="48" height="48">
                 </h1>
                 <p>Obscuro, perturbador e impossível de largar. Assim é “Dias Perfeitos”, thriller psicológico de Raphael Montes, que ganhou uma resenha exclusiva no nosso portal.<br> A história de Téo, um estudante de medicina com uma mente sombria e uma obsessão perigosa por Clarice, continua a fascinar e incomodar leitores — e agora chega às telas.<br> 📺 Dias Perfeitos já virou série na Globoplay! Dirigida por Joana Jabace e estrelada por Jaffar Bambirra e Julia Dalavia, a adaptação traz uma estética vibrante que contrasta com a narrativa sombria do livro — e ainda adiciona uma trama inédita no episódio final.</p>
-                <div style="margin:12px 0;">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ox_lo6C7ZUA" frameborder="0" allowfullscreen></iframe>
+                <div class="video-thumbnail-wrap">
+                    <a href="https://www.youtube.com/watch?v=Ox_lo6C7ZUA" target="_blank" rel="noopener">
+                        <img class="video-thumbnail" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/video-placeholder.png" alt="Thumbnail do vídeo Dias Perfeitos">
+                        <div class="play-icon"></div>
+                    </a>
                 </div>
                 <div style="text-align:center;">
                     <a href="https://seliganaleitura.com.br/dias-perfeitos-o-livro-de-raphael-montes-que-inspirou-a-serie/" class="btn">Confira a resenha completa</a>
