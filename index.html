@@ -40,28 +40,6 @@
       text-decoration: none;
       font-family: 'Poppins', Arial, sans-serif;
     }
-    h1 {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 900;
-      font-size: 30px;
-      margin: 0 0 10px 0;
-      line-height: 1.15;
-    }
-    h2 {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 700;
-      margin: 8px 0;
-      font-size: 20px;
-      line-height: 1.2;
-    }
-    p {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 400;
-      font-size: 17px;
-      margin: 0 0 12px 0;
-      color: #333333;
-      line-height: 1.45;
-    }
     .btn {
       background: #ff7a00;
       color: #ffffff;
@@ -119,7 +97,8 @@
     .tight-img {
       margin: 8px auto 8px !important;
     }
-    /* Bloco Dan Brown */
+
+    /* NOVO: bloco Dan Brown */
     .inverted-wrap {
       background: #D8D8D8;
       width: 500px;
@@ -132,19 +111,37 @@
       border-radius: 14px;
       overflow: hidden;
     }
-    .inverted-copy h1 {
-      font-size: 28px;
+
+    /* TIPOGRAFIA AJUSTADA */
+    .intro-copy h1 {
+      font-size: 26px;
+      line-height: 1.15;
+      margin: 0 0 8px 0;
+    }
+    .intro-copy p {
+      font-size: 16px;
+      line-height: 1.45;
+    }
+    .danbrown-copy h1 {
+      font-size: 24px;
       line-height: 1.15;
       margin: 0 0 10px 0;
     }
-    .inverted-copy p {
-      margin: 0 0 14px 0;
+    .danbrown-copy p {
+      font-size: 16px;
+      line-height: 1.45;
     }
+
+    /* Responsividade */
     @media (max-width: 620px) {
       .two-col { display: block !important; }
       .two-col td { display: block; width: 100% !important; }
       .resenha-col { width: 100% !important; display: block; }
       .purple-box, .green-box, .inverted-wrap { width: 100% !important; }
+      .intro-copy h1 { font-size: 24px; }
+      .intro-copy p { font-size: 16px; }
+      .danbrown-copy h1 { font-size: 22px; }
+      .danbrown-copy p { font-size: 16px; }
     }
   </style>
 </head>
@@ -164,7 +161,7 @@
       <td>
         <table width="100%" class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0;">
           <tr>
-            <td style="width:50%; padding:16px 20px; vertical-align:top;">
+            <td class="intro-copy" style="width:50%; padding:16px 20px; vertical-align:top;">
               <h1>Bem-vindo ao Mês da Leitura</h1>
               <p>Setembro é o mês perfeito para se perder (e se encontrar) nos livros! Preparamos para você uma seleção de conteúdos exclusivos: pré-vendas imperdíveis, resenhas inéditas dos nossos colunistas e novidades que estão movimentando o universo literário.</p>
               <p>Descubra os favoritos do momento e embarque em novas leituras junto com a gente. 🚀</p>
@@ -210,7 +207,7 @@
               <td class="inverted-imgcell" style="width:50%; vertical-align:top; padding:0;">
                 <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo" style="margin:0 auto;">
               </td>
-              <td class="inverted-copy" style="width:50%; padding:16px 16px 16px 20px; vertical-align:top;">
+              <td class="danbrown-copy" style="width:50%; padding:16px 16px 16px 20px; vertical-align:top;">
                 <h1>Dan Brown está<br>de volta com<br>O Segredo Final!</h1>
                 <p>Depois de seis anos de espera, os fãs finalmente podem comemorar: Dan Brown retorna em 2025 com “O Segredo Final”, uma trama que promete misturar mistério, ciência e história em seu estilo inconfundível.</p>
                 <a href="https://leitura.com.br/o-segredo-final-robert-langdon--livro-6-L999-9786555658392" class="btn">Pré-venda exclusiva</a>
@@ -238,7 +235,3 @@
   </table>
 </body>
 </html>
-
-
-
-
