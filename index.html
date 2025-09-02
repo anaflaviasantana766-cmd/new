@@ -1,126 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Email Marketing</title>
-<style>
-  /* Base + RD safe */
-  *{box-sizing:border-box;}
-  body{margin:0;padding:0;font-family:'Poppins',Arial,sans-serif;background:#ffffff;}
-  table{border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;}
-  td{padding:0;}
-  img{display:block;border:0;outline:0;text-decoration:none;max-width:100%;height:auto;}
-
-  .container{max-width:600px;margin:0 auto;background:#ffffff;}
-
-  .header{background:#004aad;padding:10px;text-align:right;}
-  .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;}
-
-  /* Tipografia */
-  h1{font-size:25px;line-height:1.25;margin:0 0 8px 0;font-weight:700;}
-  h2{font-size:20px;line-height:1.25;margin:0 0 6px 0;font-weight:700;}
-  p{font-size:12px;line-height:1.45;margin:0 0 10px 0;}
-
-  /* Botão */
-  .btn{background:#ff7a00;color:#fff;text-decoration:none;padding:8px 16px;border-radius:25px;font-size:12px;display:inline-block;}
-
-  /* Colunas */
-  .two-col{width:100%;table-layout:fixed;}
-  .two-col td{width:50%;vertical-align:top;}
-
-  /* Blocos específicos */
-  .transition-img{margin-top:10px;max-width:100%;}
-  .purple-box,.inverted-wrap,.green-box,.news-wrap{border-radius:20px;padding:16px;margin:10px auto;max-width:560px;background:#f0f0f0;}
-  .inverted-imgcell{background:#000;border-radius:14px;overflow:hidden;width:200px;height:200px;margin:0 auto;display:flex;align-items:center;justify-content:center;}
-  .inverted-img{max-width:100%;max-height:100%;object-fit:contain;}
-  .book-grid td{width:33.33%;vertical-align:top;padding:10px;}
-  .book-title{font-size:12px;line-height:1.35;margin:6px 0;font-weight:600;text-align:left;}
-  .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:flex;align-items:center;gap:6px;}
-  .highlight-title img{width:18px;height:18px;}
-  .video-title{display:inline;font-weight:700;}
-  .avatar{width:48px;height:48px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:8px;object-fit:cover;}
-  .news-img{width:140px;border-radius:8px;}
-  .spacer-4{width:4px;font-size:0;line-height:0;}
-  .news-text{word-break:break-word;overflow-wrap:anywhere;text-align:left !important;}
-  .news-cta{color:#1565D8;text-decoration:none;font-weight:600;}
-  .news-cta:hover{text-decoration:underline;}
-
-  /* ===== MOBILE ===== */
-  @media (max-width:480px){
-    .container{width:100% !important;}
-    .two-col td{display:block !important;width:100% !important;}
-    .transition-img{max-width:100% !important;}
-    .inverted-imgcell{width:140px !important;height:140px !important;}
-    .news-img{width:120px !important;}
-    .purple-box,.inverted-wrap,.green-box,.news-wrap{margin:10px 8px !important;width:auto !important;max-width:100% !important;}
-    .news-text h2{font-size:16px !important;line-height:1.25 !important;}
-  }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Marketing por e-mail</title>
+    <style>
+        /* Base + RD seguro */
+        *{box-sizing:border-box;}
+        body{margin:0;padding:0;font-family:'Poppins',Arial,sans-serif;background:#ffffff;}
+        table{border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;}
+        td{padding:0;}
+        img{display:block;border:0;outline:0;text-decoration:none;max-width:100% !important;height:auto !important;}
+        .container{max-width:600px;margin:0 auto;background:#ffffff;}
+        .header{background:#004aad;padding:10px;text-align:right;}
+        .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;}
+        /* Tipo */
+        h1{font-size:25px;line-height:1.25;margin:0 0 8px 0;font-weight:700;}
+        h2{font-size:20px;line-height:1.25;margin:0 0 6px 0;font-weight:700;}
+        p{font-size:12px;line-height:1.45;margin:0 0 10px 0;}
+        /* Botão */
+        .btn{background:#ff7a00;color:#fff;text-decoration:none;padding:8px 16px;border-radius:25px;font-size:12px;display:inline-block;}
+        /* Duas colunas (desktop) */
+        .two-col{table-layout:fixed;width:100%;}
+        .two-col td{width:50%;vertical-align:top;}
+        /* Bloco 1 */
+        .transition-img{margin-top:10px;max-width:300px;}
+        /* Bloco roxo */
+        .purple-box{background:#A1B3F7;max-width:560px;margin:10px 0 14px 16px;border-radius:20px;text-align:left;padding:16px 20px;}
+        /* Dan Brown */
+        .inverted-wrap{background:#D8D8D8;max-width:560px;margin:6px 0 20px 16px;border-radius:20px;padding:16px;background:linear-gradient(135deg, #D8D8D8 0%, #B0B0B0 100%);}
+        .inverted-imgcell{background:#000;border-radius:14px;overflow:hidden;display:block;width:200px;height:200px;margin:0 auto;text-align:center;}
+        .inverted-img{max-width:100%;max-height:100%;object-fit:contain;}
+        /* 3 principais */
+        .green-box{background:#9AC0F2;max-width:560px;margin:6px 0 20px 16px;border-radius:20px;text-align:center;padding:20px;}
+        .book-grid td{width:33.33%;vertical-align:top;padding:10px;}
+        .book-title{font-size:12px;line-height:1.35;margin:6px 0;text-align:left;font-weight:600;}
+        .cta-left{display:inline-block;margin-top:2px;}
+        /* Destaque do vídeo */
+        .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:flex;align-items:center;gap:6px;}
+        .highlight-title img{width:18px;height:18px;}
+        .video-title{display:inline;font-weight:700;}
+        .avatar{width:48px;height:48px;border-radius:50%;display:inline-block;vertical-align:middle;margin-left:8px;object-fit:cover;}
+        /* Aconteceu */
+        .news-wrap{background:#D8D8D8;max-width:560px;margin:6px 0 24px 16px;border-radius:20px;padding:16px;}
+        .news-title-center{text-align:center;margin:0;}
+        .news-img{width:140px;border-radius:8px;}
+        .spacer-4{width:4px;font-size:0;line-height:0;}
+        .news-text{word-break:break-word;overflow-wrap:anywhere;text-align:left !important;}
+        .news-cta{color:#1565D8;text-decoration:none;font-weight:600;}
+        .news-cta:hover{text-decoration:underline;}
+        /* ===== CELULAR (compatível com RD) ===== */
+        @media (max-width:480px){
+            .container{width:100% !important;}
+            .purple-box,.inverted-wrap,.green-box,.news-wrap{margin:10px 8px !important;width:auto !important;max-width:100% !important;}
+            /* Empilhar colunas para não vazar */
+            .two-col td{display:block !important;width:100% !important;}
+            .transition-img{max-width:100% !important;}
+            /* Quadrado preto menor no celular */
+            .inverted-imgcell{width:140px !important;height:140px !important;}
+            /* Notícias */
+            .news-img{width:120px !important;}
+            .spacer-4{width:4px !important;}
+            .news-text h2{font-size:18px !important;line-height:1.25 !important;}
+        }
+    </style>
 </head>
 <body>
-<table class="container" role="presentation" cellpadding="0" cellspacing="0" border="0">
-  <!-- Cabeçalho -->
-  <tr>
-    <td class="header">
-      <a href="#">Portal de Conteúdo</a>
-      <a href="#">Lançamentos</a>
-      <a href="#">Aconteceu na Leitura</a>
-    </td>
-  </tr>
-
-  <!-- BLOCO 1 -->
-  <tr>
-    <td>
-      <table class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0">
+    <table class="container" role="presentation" cellpadding="0" cellpacing="0" border="0">
+        <!-- Cabeçalho -->
         <tr>
-          <td style="padding:12px 16px;">
-            <h1>Bem-vindo ao Mês da Leitura</h1>
-            <p>Setembro é o mês perfeito para se perder (e se encontrar) nos livros! Preparamos para você uma seleção de conteúdos exclusivos.</p>
-            <img class="transition-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/transicao.png.png" alt="Transição">
-          </td>
-          <td style="padding:12px 16px;">
-            <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo" style="max-width:100%;">
-          </td>
+            <td class="header">
+                <a href="#">Portal de Conteúdo</a>
+                <a href="#">Lançamentos</a>
+                <a href="#">Aconteceu na Leitura</a>
+            </td>
         </tr>
-      </table>
-    </td>
-  </tr>
-
-  <!-- BLOCO ROXO -->
-  <tr>
-    <td>
-      <div class="purple-box" style="background:#A1B3F7;">
-        <p>Você já conhece o <strong>Portal Se Liga na Leitura</strong>? Esse é o nosso espaço dedicado a quem ama ler.</p>
-        <div style="text-align:right;">
-          <a href="https://seliganaleitura.com.br/category/portal-de-conteudos/" class="btn">👉 Acesse o Portal</a>
-        </div>
-        <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/final.png.png" alt="Final" style="max-width:100%;margin-top:12px;">
-      </div>
-    </td>
-  </tr>
-
-  <!-- DAN BROWN -->
-  <tr>
-    <td>
-      <div class="inverted-wrap">
-        <table class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0">
-          <tr>
-            <td style="padding:0 16px 12px 16px;">
-              <div class="inverted-imgcell">
-                <img class="inverted-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo">
-              </div>
+        <!-- BLOCO 1 -->
+        <tr>
+            <td>
+                <table class="two-col" role="presentation" cellpadding="0" cellpacing="0" border="0">
+                    <tr>
+                        <td style="padding:12px 16px;">
+                            <h1>Bem-vindo ao Mês da Leitura</h1>
+                            <p>Setembro é o mês perfeito para se perder (e se encontrar) nos livros! Preparamos para você uma seleção de conteúdos exclusivos: pré-vendas imperdíveis, resenhas inéditas de nossos colunistas e novidades que estão movimentando o universo literário.</p>
+                            <p>Descubra os favoritos do momento e embarque em novas leituras junto com a gente. 🚀</p>
+                            <img class="transition-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/transicao.png.png" alt="Transição">
+                        </td>
+                        <td style="padding:12px 16px;">
+                            <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo">
+                        </td>
+                    </tr>
+                </table>
             </td>
-            <td style="padding:12px 16px;text-align:left;">
-              <h1>Dan Brown está<br>de volta com<br>O Segredo Final!</h1>
-              <p>Depois de seis anos de espera, os fãs finalmente podem comemorar.</p>
-              <a href="https://leitura.com.br/o-segredo-final-robert-langdon--livro-6-L999-9786555658392" class="btn">Pré-venda exclusiva</a>
+        </tr>
+        <!-- BLOCO ROXO -->
+        <tr>
+            <td>
+                <div class="purple-box">
+                    <p>Você já conhece o <strong>Portal Se Liga na Leitura</strong>? Esse é o nosso espaço dedicado a quem ama ler e quer sempre ter boas recomendações à mão. Ali, você encontra resenhas feitas por um time apaixonado de colunistas, que mergulham fundo nos lançamentos e clássicos para trazer opiniões sinceras e cheias de insights.</p>
+                    <div style="text-align:right;">
+                        <a href="https://seliganaleitura.com.br/category/portal-de-conteudos/" class="btn">👉 Acesse o Portal e descubra mais</a>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/final.png.png" alt="Final" style="max-width:100%; margin-top:12px;">
+                </div>
             </td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
+        </tr>
+        <!-- DAN BROWN -->
+        <tr>
+            <td>
+                <div class="inverted-wrap">
+                    <table class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td style="padding:12px 16px;">
+                                <div class="inverted-imgcell">
+                                    <img class="inverted-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo">
+                                </div>
+                            </td>
+                            <td style="padding:12px 16px;text-align:left;">
+                                <h1>Dan Brown está<br>de volta com<br>O Segredo Final!</h1>
+                                <p>Depois de seis anos de espera, os fãs finalmente podem comemorar: Dan Brown retorna em 2025 com “O Segredo Final”, uma trama que promete misturar mistério, ciência e história em seu estilo inconfundível.</p>
+                                <a href="https://leitura.com.br/o-segredo-final-robert-langdon--livro-6-L999-9786555658392" class="btn">Pré-venda exclusiva</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- TOP 3 -->
+        <tr>
+            <td>
+                <div class="green-box">
+                    <h1>#Top3 Resenhas Seliga</h1>
+                    <p style="margin:0 0 16px 0;">No Se Liga na Leitura, nossos colunistas mergulharam em grandes histórias neste mês. Confira o que eles acharam:</p>
+                    <table class="book-grid" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td align="center">
+                                <a href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">
+                                    <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha1.png.png" alt="Sorte no Amor - Lynn Painter">
+                                </a>
+                                <p class="book-title"><span style="font-weight:600;">Sorte no Amor</span> — <span style="font-weight:400;">Lynn Painter</span></p>
+                                <div style="text-align:left;">
+                                    <a class="btn cta-left" href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">Acessar resenha</a>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <a href="https://seliganaleitura.com.br/uma-vida-e-tanto/" target="_blank" rel="noopener">
+                                    <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha2.png.png" alt="Uma Vida e Tanto — Emily Henry">
+                                </a>
+                                <p class="book-title"><span style="font-weight:600;">Uma Vida e Tanto</span> — <span style="font-weight:400;">Emily Henry</span></p>
+                                <div style="text-align:left;">
+                                    <a class="btn cta-left" href="https://seliganaleitura.com.br/uma-vida-e-tanto/" target="_blank" rel="noopener">Acessar revisão</a>
+                                </div>
+                            </td>
+                            <td align="center">
+                                <a href="https://seliganaleitura.com.br/um-amor-problematico-de-verao/" target="_blank" rel="noopener">
+                                    <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha3.png.png" alt="Um Amor Problemático de Verão — Ali Hazelwood">
+                                </a>
+                                <p class="book-title"><span style="font-weight:600;">Um Amor Problemático de Verão</span> — <span style="font-weight:400;">Ali Hazelwood</span></p>
+                                <div style="text-align:left;">
+                                    <a class="btn cta-left" href="https://seliganaleitura.com.br/um-amor-problematico-de-verao/" target="_blank" rel="noopener">Acessar resenha</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- RESENHA DESTAQUE -->
+        <tr>
+            <td style="padding:20px 16px;">
+                <p class="highlight-title">
+                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXd5azNpZnhpMXg4Zjk4cXdqejhtcWRhZ2o1ZXJmdDZ2cXp0cmNtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZatUqV7mV5iH9eyAfb/giphy.gif" alt="GIF"> Resenha destaque do mês
+                </p>
+                <h1 class="video-title">Dias Perfeitos — por Juliano Jacob <img class="avatar" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/juliano.png" alt="Juliano" width="48" height="48">
+                </h1>
+                <p>Obscuro, perturbador e impossível de largar. Assim é “Dias Perfeitos”, thriller psicológico de Raphael Montes, que ganhou uma resenha exclusiva no nosso portal.<br> A história de Téo, um estudante de medicina com uma mente sombria e uma obsessão perigosa por Clarice, continua a fascinar e incomodar leitores — e agora chega às telas.<br> 📺 Dias Perfeitos já virou série na Globoplay! Dirigida por Joana Jabace e estrelada por Jaffar Bambirra e Julia Dalavia, a adaptação traz uma estética vibrante que contrasta com a narrativa sombria do livro — e ainda adiciona uma trama inédita no episódio final.</p>
+                <div style="margin:12px 0;">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ox_lo6C7ZUA" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div style="text-align:center;">
+                    <a href="https://seliganaleitura.com.br/dias-perfeitos-o-livro-de-raphael-montes-que-inspirou-a-serie/" class="btn">Confira a resenha completa</a>
+                </div>
+            </td>
+        </tr>
+        <!-- ACONTECEU (com espaçador de 4px) -->
+        <tr>
+            <td>
+                <div class="news-wrap">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+                        <tr>
+                            <td colspan="3" style="padding:0 0 8px 0;" align="center">
+                                <h1 class="news-title-center">Aconteceu na Leitura</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150" valign="top" align="left"><img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/Image%20(3).png" alt="Novas lojas da Livraria Leitura"></td>
+                            <td class="spacer-4" width="4">&nbsp;</td>
+                            <td class="news-text" valign="top" align="left">
+                                <h2>📍 Novas Lojas da Livraria Leitura</h2>
+                                <p>Em agosto, inauguramos duas unidades: a 128ª loja no DF Plaza Shopping (Águas Claras/DF) e a 129ª no Shopping Park Sul (Volta Redonda/RJ). Com espaços modernos e um mix de mais de 100 mil itens, ambas oferecem livros, papelaria, presentes e áreas para eventos culturais.</p>
+                                <a class="news-cta" href="#">👉 Conheça nossas novas lojas</a>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3" style="padding:8px 0;"><div style="border-top:1px dashed #BDBDBD;height:1px;line-height:1px;"></div></td></tr>
+                        <tr>
+                            <td width="150" valign="top" align="left"><img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/Image%20(2).png" alt="Campanha solidária com Rafa Kalimann"></td>
+                            <td class="spacer-4" width="4">&nbsp;</td>
+                            <td class="news-text" valign="top" align="left">
+                                <h2>💖 Campanha Solidária com Rafa Kalimann</h2>
+                                <p>Em parceria com Rafa Kalimann, doamos R$10 mil em livros para o projeto Rocinha em Cena, levando cultura e leitura para a comunidade.</p>
+                                <a class="news-cta" href="#">👉 Veja como foi a ação</a>
+                            </td>
+                        </tr>
+                        <tr><td colspan="3" style="padding:8px 0;"><div style="border-top:1px dashed #BDBDBD;height:1px;line-height:1px;"></div></td></tr>
+                        <tr>
+                            <td width="150" valign="top" align="left"><img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/image%209.png" alt="Seleção de livros de mistério até R$59,90"></td>
+                            <td class="spacer-4" width="4">&nbsp;</td>
+                            <td class="news-text" valign="top" align="left">
+                                <h2>🔍 Seleção de Livros de Mistério até R$59,90</h2>
+                                <p>Se você ama suspense e enigmas, confira nossa curadoria de títulos com preços promocionais.</p>
+                                <a class="news-cta" href="#">👉 Explore a seleção de mistério</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+</table>
+
 
   <!-- TOP 3 -->
   <tr>
