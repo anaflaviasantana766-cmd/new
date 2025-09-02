@@ -7,7 +7,7 @@
   <style>
     body{margin:0;padding:0;font-family:'Poppins',Arial,sans-serif;background:#ffffff;}
     table{border-spacing:0;width:100%;}
-    img{display:block;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;}
+    img{display:block;height:auto;border:0;outline:none;text-decoration:none;}
     .container{max-width:600px;margin:0 auto;background:#ffffff;}
     .header{background:#004aad;padding:10px;text-align:right;}
     .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;font-family:'Poppins',Arial,sans-serif;}
@@ -15,11 +15,6 @@
     .btn{background:#ff7a00;color:#ffffff;text-decoration:none;padding:8px 16px;border-radius:25px;font-size:12px;display:inline-block;}
 
     .purple-box{background:#A1B3F7;width:500px;margin:10px auto 20px;border-radius:20px;text-align:left;padding:20px;}
-    .top3-title{color:#004aad;text-decoration:none;}
-    .resenha-col{width:33.3%;padding:10px;vertical-align:top;}
-    .resenha-link{display:block;text-decoration:none;color:#111;}
-    .resenha-link h2{font-size:20px;margin:8px 0;font-weight:700;}
-    .resenha-link p{font-size:16px;margin:0;}
     .aconteceu-item{padding:20px 0;border-bottom:1px solid #ddd;}
 
     .footer{background:#004aad;border-radius:0 0 30px 30px;text-align:center;padding:20px;}
@@ -45,7 +40,7 @@
     .img-original{max-width:none !important;width:auto !important;height:auto !important;}
 
     /* BLOCO 1 (Bem-vindo): match visual de altura texto x imagem */
-    .hero-row{height:220px;} /* ajuste aqui se quiser mais/menos altura */
+    .hero-row{height:240px;} /* <- ajuste aqui se quiser 220/260 etc. */
     .hero-row .hero-img{height:100% !important;width:auto !important;max-width:none !important;}
 
     /* TIPOGRAFIA – conforme pedido */
@@ -53,18 +48,25 @@
     .purple-box p{font-size:12px;line-height:1.45;margin:0 0 8px 0;}
     /* H1 do Bloco 1 e Dan Brown: 17px, Poppins Black */
     .intro-copy h1,
-    .danbrown-copy h1{
-      font-size:17px;line-height:1.2;margin:0 0 6px 0;font-weight:900;
-    }
-    /* texto menor nos dois blocos onde você pediu antes (mantendo 12) */
+    .danbrown-copy h1{font-size:17px;line-height:1.2;margin:0 0 6px 0;font-weight:900;}
+    /* texto 12 nos dois blocos */
     .intro-copy p,
     .danbrown-copy p{font-size:12px;line-height:1.4;margin:0 0 8px 0;}
 
-    /* TOP 3 – fundo #9AC0F2 e título 40px, Poppins Black */
+    /* TOP 3 – fundo #9AC0F2 e título 40px, Poppins Black + subtítulo 12px */
     .green-box{background:#9AC0F2;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
-    .green-box .section-title{
-      font-size:40px;line-height:1.1;margin:0 0 16px 0;font-weight:900;letter-spacing:0.2px;
-    }
+    .green-box .section-title{font-size:40px;line-height:1.1;margin:0 0 8px 0;font-weight:900;letter-spacing:0.2px;}
+    .green-box .section-sub{font-size:12px;line-height:1.4;margin:0 0 16px 0;font-weight:400;}
+
+    /* Cartões das resenhas */
+    .resenha-col{width:33.3%;padding:10px;vertical-align:top;}
+    .resenha-link{display:block;text-decoration:none;color:#111;}
+    .resenha-img{display:block;margin:0 auto 8px auto;max-width:100%;}
+    /* Texto alinhado à esquerda com estilo “antes do hífen semibold / depois regular” */
+    .resenha-text{font-size:12px;line-height:1.4;text-align:left;margin:0 0 8px 0;}
+    .resenha-text .pre{font-weight:600;}
+    .resenha-text .pos{font-weight:400;}
+    .btn-left{display:inline-block;margin-top:4px;}
 
     /* “Resenha destaque do mês” com GIF/título e bloco Dias Perfeitos */
     .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:flex;align-items:center;gap:6px;}
@@ -154,28 +156,46 @@
       <td align="center" style="padding:0 10px;">
         <div class="green-box">
           <h1 class="section-title">#Top3 Resenhas Seliga</h1>
+          <p class="section-sub">No Se Liga na Leitura, nossos colunistas mergulharam em grandes histórias neste mês. Confira o que eles acharam:</p>
           <table width="100%" role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
+              <!-- Resenha 1 -->
               <td class="resenha-col" align="center">
                 <a class="resenha-link" href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">
-                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha1.png.png" alt="Sorte no Amor - Lynn Painter">
-                  <h2>Sorte no Amor — Lynn Painter</h2>
-                  <p>Resenha completa no portal</p>
+                  <img class="resenha-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha1.png.png" alt="Sorte no Amor - Lynn Painter">
                 </a>
+                <p class="resenha-text">
+                  <span class="pre">Sorte no Amor</span> — <span class="pos">Lynn Painter</span>
+                </p>
+                <div style="text-align:left;">
+                  <a class="btn btn-left" href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">Acessar resenha</a>
+                </div>
               </td>
+
+              <!-- Resenha 2 -->
               <td class="resenha-col" align="center">
                 <a class="resenha-link" href="https://seliganaleitura.com.br/uma-vida-e-tanto/" target="_blank" rel="noopener">
-                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha2.png.png" alt="Uma Vida e Tanto — Emily Henry">
-                  <h2>Uma Vida e Tanto — Emily Henry</h2>
-                  <p>Resenha completa no portal</p>
+                  <img class="resenha-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha2.png.png" alt="Uma Vida e Tanto — Emily Henry">
                 </a>
+                <p class="resenha-text">
+                  <span class="pre">Uma Vida e Tanto</span> — <span class="pos">Emily Henry</span>
+                </p>
+                <div style="text-align:left;">
+                  <a class="btn btn-left" href="https://seliganaleitura.com.br/uma-vida-e-tanto/" target="_blank" rel="noopener">Acessar resenha</a>
+                </div>
               </td>
+
+              <!-- Resenha 3 -->
               <td class="resenha-col" align="center">
                 <a class="resenha-link" href="https://seliganaleitura.com.br/um-amor-problematico-de-verao/" target="_blank" rel="noopener">
-                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha3.png.png" alt="Um Amor Problemático de Verão — Ali Hazelwood">
-                  <h2>Um Amor Problemático de Verão — Ali Hazelwood</h2>
-                  <p>Resenha completa no portal</p>
+                  <img class="resenha-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha3.png.png" alt="Um Amor Problemático de Verão — Ali Hazelwood">
                 </a>
+                <p class="resenha-text">
+                  <span class="pre">Um Amor Problemático de Verão</span> — <span class="pos">Ali Hazelwood</span>
+                </p>
+                <div style="text-align:left;">
+                  <a class="btn btn-left" href="https://seliganaleitura.com.br/um-amor-problematico-de-verao/" target="_blank" rel="noopener">Acessar resenha</a>
+                </div>
               </td>
             </tr>
           </table>
@@ -221,5 +241,6 @@
   </table>
 </body>
 </html>
+
 
 
