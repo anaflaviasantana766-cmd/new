@@ -67,7 +67,7 @@
       display:inline-block;vertical-align:middle;margin-left:8px;object-fit:cover;
     }
 
-    /* Aconteceu na Leitura */
+    /* Aconteceu na Leitura (sem espaçamento) */
     .news-wrap{
       background:#D8D8D8;
       max-width:560px;
@@ -78,11 +78,9 @@
     .news-section{width:100%;margin:0;table-layout:fixed;}
     .news-sep{border-top:1px dashed #BDBDBD;height:1px;line-height:1px;margin:10px 0;}
     .news-img{width:140px;border-radius:8px;display:block;}
-    .news-text{padding:0 0 0 6px;word-break:break-word;overflow-wrap:anywhere;text-align:left !important;}
+    .news-text{padding:0;word-break:break-word;overflow-wrap:anywhere;text-align:left !important;}
     .news-cta{color:#1565D8;text-decoration:none;font-weight:600;}
     .news-cta:hover{text-decoration:underline;}
-
-    /* Título centralizado nessa seção */
     .news-title-center{text-align:center;margin:0;}
 
     /* ===== MOBILE ===== */
@@ -94,10 +92,9 @@
 
       .inverted-imgcell{width:200px !important;height:200px !important;}
 
-      /* Aconteceu: imagem e coluna ligeiramente maiores e com gap controlado */
       .news-img{width:130px !important;}
       .news-section td[width="150"]{width:130px !important;}
-      .news-text{padding-left:6px !important;}
+      .news-text{padding-left:0 !important;}
       .news-text h2{font-size:18px !important;line-height:1.25 !important;}
       .news-text p{font-size:12px !important;}
     }
@@ -176,7 +173,7 @@
         <div class="green-box">
           <h1>#Top3 Resenhas Seliga</h1>
           <p style="margin:0 0 16px 0;">No Se Liga na Leitura, nossos colunistas mergulharam em grandes histórias neste mês. Confira o que eles acharam:</p>
-        <table class="book-grid" width="100%" role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <table class="book-grid" width="100%" role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
               <td align="center">
                 <a href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">
@@ -234,11 +231,14 @@
       </td>
     </tr>
 
-    <!-- ACONTECEU NA LEITURA -->
+    <!-- ACONTECEU NA LEITURA (sem espaçamento) -->
     <tr>
       <td>
         <div class="news-wrap">
-          <table class="news-section" role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <table class="news-section"
+                 role="presentation"
+                 cellpadding="0" cellspacing="0" border="0"
+                 style="border-collapse:collapse;border-spacing:0;mso-table-lspace:0pt;mso-table-rspace:0pt;">
             <tr>
               <td colspan="2" style="padding:0 0 8px 0;" align="center">
                 <h1 class="news-title-center">Aconteceu na Leitura</h1>
@@ -247,10 +247,10 @@
 
             <!-- Item 1 -->
             <tr>
-              <td width="150" valign="top" style="padding:0 3px 0 0;" align="left">
+              <td width="150" valign="top" style="padding:0;" align="left">
                 <img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/Image%20(3).png" alt="Novas lojas da Livraria Leitura">
               </td>
-              <td class="news-text" valign="top" align="left">
+              <td class="news-text" valign="top" align="left" style="padding:0;">
                 <h2>📍 Novas Lojas da Livraria Leitura</h2>
                 <p>Em agosto, inauguramos duas unidades: a 128ª loja no DF Plaza Shopping (Águas Claras/DF) e a 129ª no Shopping Park Sul (Volta Redonda/RJ). Com espaços modernos e um mix de mais de 100 mil itens, ambas oferecem livros, papelaria, presentes e áreas para eventos culturais.</p>
                 <a class="news-cta" href="#">👉 Conheça nossas novas lojas</a>
@@ -261,10 +261,10 @@
 
             <!-- Item 2 -->
             <tr>
-              <td width="150" valign="top" style="padding:0 3px 0 0;" align="left">
+              <td width="150" valign="top" style="padding:0;" align="left">
                 <img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/Image%20(2).png" alt="Campanha solidária com Rafa Kalimann">
               </td>
-              <td class="news-text" valign="top" align="left">
+              <td class="news-text" valign="top" align="left" style="padding:0;">
                 <h2>💖 Campanha Solidária com Rafa Kalimann</h2>
                 <p>Em parceria com Rafa Kalimann, doamos R$10 mil em livros para o projeto Rocinha em Cena, levando cultura e leitura para a comunidade.</p>
                 <a class="news-cta" href="#">👉 Veja como foi a ação</a>
@@ -275,10 +275,10 @@
 
             <!-- Item 3 -->
             <tr>
-              <td width="150" valign="top" style="padding:0 3px 0 0;" align="left">
+              <td width="150" valign="top" style="padding:0;" align="left">
                 <img class="news-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/image%209.png" alt="Seleção de livros de mistério até R$59,90">
               </td>
-              <td class="news-text" valign="top" align="left">
+              <td class="news-text" valign="top" align="left" style="padding:0;">
                 <h2>🔍 Seleção de Livros de Mistério até R$59,90</h2>
                 <p>Se você ama suspense e enigmas, confira nossa curadoria de títulos com preços promocionais.</p>
                 <a class="news-cta" href="#">👉 Explore a seleção de mistério</a>
@@ -291,6 +291,7 @@
   </table>
 </body>
 </html>
+
 
 
 
