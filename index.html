@@ -5,53 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Email Marketing</title>
   <style>
-    body{margin:0;padding:0;font-family:'Poppins',Arial,sans-serif;background:#ffffff;}
-    table{border-spacing:0;width:100%;}
-    img{display:block;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;}
-    .container{max-width:600px;margin:0 auto;background:#ffffff;}
-    .header{background:#004aad;padding:10px;text-align:right;}
-    .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;font-family:'Poppins',Arial,sans-serif;}
-    h1{font-family:'Poppins',Arial,sans-serif;font-weight:900;font-size:30px;margin:0 0 10px 0;line-height:1.15;}
-    h2{font-family:'Poppins',Arial,sans-serif;font-weight:700;margin:8px 0;font-size:20px;line-height:1.2;}
-    p{font-family:'Poppins',Arial,sans-serif;font-weight:400;font-size:17px;margin:0 0 12px 0;color:#333333;line-height:1.45;}
-    .btn{background:#ff7a00;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:25px;font-size:16px;font-family:'Poppins',Arial,sans-serif;display:inline-block;}
-    .purple-box{background:#A1B3F7;width:500px;margin:10px auto 20px;border-radius:20px;text-align:left;padding:20px;}
-    .green-box{background:#d5f5d5;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
-    .top3-title{color:#004aad;text-decoration:none;}
-    .resenha-col{width:33.3%;padding:10px;}
-    .aconteceu-item{padding:20px 0;border-bottom:1px solid #ddd;}
-    .footer{background:#004aad;border-radius:0 0 30px 30px;text-align:center;padding:20px;}
-    .footer img{width:24px;margin:0 6px;display:inline-block;vertical-align:middle;}
-    .footer-line{border-top:1px solid #ffffff;margin:15px 0;}
-    .tight-img{margin:8px auto 8px !important;}
-
-    /* NOVO: bloco invertido (abaixo do roxo) */
-    .inverted-wrap{
-      background:#D8D8D8;
-      width:500px;
-      margin:16px auto 24px;
-      border-radius:20px;
-      padding:16px;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #ffffff;
     }
-    .inverted-imgcell{
-      background:#000000; /* fundo preto da área da imagem */
-      border-radius:14px;
-      overflow:hidden; /* arredonda a própria imagem dentro */
+    table {
+      border-spacing: 0;
+      width: 100%;
     }
-    .inverted-copy h1{
-      font-size:28px; /* ligeiramente menor pra caber melhor */
-      line-height:1.15;
-      margin:0 0 10px 0;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 0;
+      outline: none;
+      text-decoration: none;
     }
-    .inverted-copy p{
-      margin:0 0 14px 0;
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
     }
-
-    @media (max-width:620px){
-      .two-col{display:block!important;}
-      .two-col td{display:block;width:100%!important;}
-      .resenha-col{width:100%!important;display:block;}
-      .purple-box,.green-box,.inverted-wrap{width:100%!important;}
+    .header {
+      background: #004aad;
+      padding: 10px;
+      text-align: right;
+    }
+    .header a {
+      color: #ffffff;
+      font-size: 10px;
+      margin-left: 15px;
+      text-decoration: none;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+    h1 {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 30px;
+      margin: 0 0 10px 0;
+      line-height: 1.15;
+    }
+    h2 {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 700;
+      margin: 8px 0;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    p {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      margin: 0 0 12px 0;
+      color: #333333;
+      line-height: 1.45;
+    }
+    .btn {
+      background: #ff7a00;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-family: 'Poppins', Arial, sans-serif;
+      display: inline-block;
+    }
+    .purple-box {
+      background: #A1B3F7;
+      width: 500px;
+      margin: 10px auto 20px;
+      border-radius: 20px;
+      text-align: left;
+      padding: 20px;
+    }
+    .green-box {
+      background: #d5f5d5;
+      width: 500px;
+      margin: 30px auto;
+      border-radius: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+    .top3-title {
+      color: #004aad;
+      text-decoration: none;
+    }
+    .resenha-col {
+      width: 33.3%;
+      padding: 10px;
+    }
+    .aconteceu-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .footer {
+      background: #004aad;
+      border-radius: 0 0 30px 30px;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer img {
+      width: 24px;
+      margin: 0 6px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .footer-line {
+      border-top: 1px solid #ffffff;
+      margin: 15px 0;
+    }
+    .tight-img {
+      margin: 8px auto 8px !important;
+    }
+    /* Bloco Dan Brown */
+    .inverted-wrap {
+      background: #D8D8D8;
+      width: 500px;
+      margin: 16px auto 24px;
+      border-radius: 20px;
+      padding: 16px;
+    }
+    .inverted-imgcell {
+      background: #000000;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .inverted-copy h1 {
+      font-size: 28px;
+      line-height: 1.15;
+      margin: 0 0 10px 0;
+    }
+    .inverted-copy p {
+      margin: 0 0 14px 0;
+    }
+    @media (max-width: 620px) {
+      .two-col { display: block !important; }
+      .two-col td { display: block; width: 100% !important; }
+      .resenha-col { width: 100% !important; display: block; }
+      .purple-box, .green-box, .inverted-wrap { width: 100% !important; }
     }
   </style>
 </head>
@@ -84,7 +177,7 @@
       </td>
     </tr>
 
-    <!-- Transição (colada) -->
+    <!-- Imagem de transição -->
     <tr>
       <td style="padding:0 10px;">
         <img class="tight-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/transicao.png.png" alt="Transição" style="margin:8px auto 8px;max-width:100%;">
@@ -99,7 +192,7 @@
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:10px 0 0;">
             <tr>
               <td align="right">
-                <a href="https://seliganaleitura.com.br/category/portal-de-conteudos/" class="btn">👉 Pré-venda exclusiva</a><!-- texto do botão do roxo ficou como você pediu antes; se quiser manter "Acesse o Portal..." é só trocar o rótulo -->
+                <a href="https://seliganaleitura.com.br/category/portal-de-conteudos/" class="btn">👉 Acesse o Portal e descubra mais</a>
               </td>
             </tr>
           </table>
@@ -108,17 +201,15 @@
       </td>
     </tr>
 
-    <!-- NOVO: Bloco abaixo do roxo (Dan Brown) -->
+    <!-- Bloco Dan Brown -->
     <tr>
       <td align="center" style="padding:0 10px;">
         <div class="inverted-wrap">
           <table width="100%" class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0;">
             <tr>
-              <!-- imagem com fundo preto -->
               <td class="inverted-imgcell" style="width:50%; vertical-align:top; padding:0;">
                 <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo" style="margin:0 auto;">
               </td>
-              <!-- textos e botão -->
               <td class="inverted-copy" style="width:50%; padding:16px 16px 16px 20px; vertical-align:top;">
                 <h1>Dan Brown está<br>de volta com<br>O Segredo Final!</h1>
                 <p>Depois de seis anos de espera, os fãs finalmente podem comemorar: Dan Brown retorna em 2025 com “O Segredo Final”, uma trama que promete misturar mistério, ciência e história em seu estilo inconfundível.</p>
@@ -130,10 +221,7 @@
       </td>
     </tr>
 
-    <!-- (restante do seu template: Top3, Resenha, Aconteceu, Rodapé) -->
-    <!-- ... mantenha aqui as seções que você já tinha, sem alterações ... -->
-
-    <!-- Rodapé (ícones lado a lado) -->
+    <!-- Rodapé -->
     <tr>
       <td class="footer">
         <a href="#"><img src="<!-- facebook -->" alt="Facebook"></a>
@@ -150,6 +238,7 @@
   </table>
 </body>
 </html>
+
 
 
 
