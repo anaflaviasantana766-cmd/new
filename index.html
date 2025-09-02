@@ -12,12 +12,15 @@
     .header{background:#004aad;padding:10px;text-align:right;}
     .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;font-family:'Poppins',Arial,sans-serif;}
 
-    .btn{background:#ff7a00;color:#ffffff;text-decoration:none;padding:10px 18px;border-radius:25px;font-size:15px;display:inline-block;}
+    .btn{background:#ff7a00;color:#ffffff;text-decoration:none;padding:8px 16px;border-radius:25px;font-size:12px;display:inline-block;}
 
     .purple-box{background:#A1B3F7;width:500px;margin:10px auto 20px;border-radius:20px;text-align:left;padding:20px;}
-    .green-box{background:#d5f5d5;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
+    /* Fundo do Top 3 atualizado via instrução abaixo (.green-box) */
     .top3-title{color:#004aad;text-decoration:none;}
-    .resenha-col{width:33.3%;padding:10px;}
+    .resenha-col{width:33.3%;padding:10px;vertical-align:top;}
+    .resenha-link{display:block;text-decoration:none;color:#111;}
+    .resenha-link h2{font-size:20px;margin:8px 0;}
+    .resenha-link p{font-size:16px;margin:0;}
     .aconteceu-item{padding:20px 0;border-bottom:1px solid #ddd;}
     .footer{background:#004aad;border-radius:0 0 30px 30px;text-align:center;padding:20px;}
     .footer img{width:24px;margin:0 6px;display:inline-block;vertical-align:middle;}
@@ -28,20 +31,26 @@
     .inverted-wrap{background:#D8D8D8;width:500px;margin:16px auto 24px;border-radius:20px;padding:16px;}
     .inverted-imgcell{background:#000;border-radius:14px;overflow:hidden;}
 
-    /* TIPOGRAFIA AJUSTADA PARA CABER AO LADO DA IMAGEM */
-    .intro-copy h1{font-size:24px;line-height:1.15;margin:0 0 6px 0;}
-    .intro-copy p{font-size:15px;line-height:1.4;margin:0 0 8px 0;}
+    /* TIPOGRAFIA 11/12px nos dois blocos pedidos */
+    .intro-copy h1{font-size:14px;line-height:1.2;margin:0 0 4px 0;}
+    .intro-copy p{font-size:11px;line-height:1.3;margin:0 0 6px 0;}
+    .danbrown-copy h1{font-size:13px;line-height:1.2;margin:0 0 6px 0;}
+    .danbrown-copy p{font-size:11px;line-height:1.3;margin:0 0 8px 0;}
 
-    .danbrown-copy h1{font-size:22px;line-height:1.15;margin:0 0 8px 0;}
-    .danbrown-copy p{font-size:15px;line-height:1.4;margin:0 0 10px 0;}
+    /* Título “Resenha destaque do mês” com GIF */
+    .highlight-title{font-size:14px;color:#999;margin:0 0 8px 0;display:flex;align-items:center;gap:6px;}
+    .highlight-title img{width:18px;height:18px;display:inline-block;vertical-align:middle;}
+
+    /* TOP 3 – fundo atualizado para #9AC0F2 */
+    .green-box{background:#9AC0F2;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
 
     @media (max-width:620px){
       .two-col{display:block!important;}
       .two-col td{display:block;width:100%!important;}
       .resenha-col{width:100%!important;display:block;}
       .purple-box,.green-box,.inverted-wrap{width:100%!important;}
-      .intro-copy h1{font-size:22px;}
-      .danbrown-copy h1{font-size:20px;}
+      .intro-copy h1{font-size:13px;}
+      .danbrown-copy h1{font-size:12px;}
     }
   </style>
 </head>
@@ -61,22 +70,20 @@
       <td>
         <table width="100%" class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0;">
           <tr>
-            <!-- texto mais compacto -->
-            <td class="intro-copy" style="width:48%; padding:14px 16px; vertical-align:top;">
+            <td class="intro-copy" style="width:50%; padding:12px 16px; vertical-align:top;">
               <h1>Bem-vindo ao Mês da Leitura</h1>
               <p>Setembro é o mês perfeito para se perder (e se encontrar) nos livros! Preparamos para você uma seleção de conteúdos exclusivos: pré-vendas imperdíveis, resenhas inéditas dos nossos colunistas e novidades que estão movimentando o universo literário.</p>
               <p>Descubra os favoritos do momento e embarque em novas leituras junto com a gente. 🚀</p>
             </td>
-            <!-- imagem um pouco mais larga (fica mais alta) -->
-            <td style="width:52%; vertical-align:top;">
-              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo" style="width:100%;height:auto;">
+            <td style="width:50%; vertical-align:top;">
+              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo">
             </td>
           </tr>
         </table>
       </td>
     </tr>
 
-    <!-- Imagem de transição (colada) -->
+    <!-- Imagem de transição -->
     <tr>
       <td style="padding:0 10px;">
         <img class="tight-img" src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/transicao.png.png" alt="Transição" style="margin:8px auto 8px;max-width:100%;">
@@ -106,12 +113,10 @@
         <div class="inverted-wrap">
           <table width="100%" class="two-col" role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0;">
             <tr>
-              <!-- imagem mais larga aumenta a altura visível -->
-              <td class="inverted-imgcell" style="width:55%; vertical-align:top; padding:0;">
-                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo" style="width:100%;height:auto;margin:0;">
+              <td class="inverted-imgcell" style="width:50%; vertical-align:top; padding:0;">
+                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Capa / Promo" style="margin:0 auto;">
               </td>
-              <!-- texto mais compacto -->
-              <td class="danbrown-copy" style="width:45%; padding:14px 14px 14px 18px; vertical-align:top;">
+              <td class="danbrown-copy" style="width:50%; padding:12px 12px 12px 16px; vertical-align:top;">
                 <h1>Dan Brown está<br>de volta com<br>O Segredo Final!</h1>
                 <p>Depois de seis anos de espera, os fãs finalmente podem comemorar: Dan Brown retorna em 2025 com “O Segredo Final”, uma trama que promete misturar mistério, ciência e história em seu estilo inconfundível.</p>
                 <a href="https://leitura.com.br/o-segredo-final-robert-langdon--livro-6-L999-9786555658392" class="btn">Pré-venda exclusiva</a>
@@ -122,7 +127,60 @@
       </td>
     </tr>
 
-    <!-- Rodapé (ícones lado a lado) -->
+    <!-- Top 3 Resenhas (fundo #9AC0F2 e cada resenha clicável) -->
+    <tr>
+      <td align="center" style="padding:0 10px;">
+        <div class="green-box">
+          <a href="#" class="top3-title"><h1>#Top3resenhas seliga na leitura</h1></a>
+          <table width="100%" role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <!-- Resenha 1 -->
+              <td class="resenha-col" align="center">
+                <a class="resenha-link" href="https://seliganaleitura.com.br/sorte-no-amor/" target="_blank" rel="noopener">
+                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha1.png.png" alt="Sorte no Amor - Lynn Painter">
+                  <h2>Sorte no Amor — Lynn Painter</h2>
+                  <p>Resenha completa no portal</p>
+                </a>
+              </td>
+              <!-- Resenha 2 -->
+              <td class="resenha-col" align="center">
+                <a class="resenha-link" href="https://seliganaleitura.com.br/uma-vida-e-tanto/" target="_blank" rel="noopener">
+                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha2.png.png" alt="Uma Vida e Tanto — Emily Henry">
+                  <h2>Uma Vida e Tanto — Emily Henry</h2>
+                  <p>Resenha completa no portal</p>
+                </a>
+              </td>
+              <!-- Resenha 3 -->
+              <td class="resenha-col" align="center">
+                <a class="resenha-link" href="https://seliganaleitura.com.br/um-amor-problematico-de-verao/" target="_blank" rel="noopener">
+                  <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha3.png.png" alt="Um Amor Problemático de Verão — Ali Hazelwood">
+                  <h2>Um Amor Problemático de Verão — Ali Hazelwood</h2>
+                  <p>Resenha completa no portal</p>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Resenha destaque do mês -->
+    <tr>
+      <td style="padding:20px;" align="left">
+        <p class="highlight-title">
+          <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXd5azNpZnhpMXg4Zjk4cXdqejhtcWRhZ2o1ZXJmdDZ2cXp0cmNtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZatUqV7mV5iH9eyAfb/giphy.gif" alt="GIF"> Resenha destaque do mês
+        </p>
+        <h1>Dias Perfeitos - por Juliano Jacob
+          <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/juliano.png" alt="Juliano" width="30" style="border-radius:50%; vertical-align:middle;">
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a risus sed leo dictum feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ox_lo6C7ZUA" frameborder="0" allowfullscreen></iframe>
+        <br>
+        <a href="#" class="btn">Confira a resenha</a>
+      </td>
+    </tr>
+
+    <!-- Rodapé -->
     <tr>
       <td class="footer">
         <a href="#"><img src="<!-- facebook -->" alt="Facebook"></a>
@@ -139,5 +197,3 @@
   </table>
 </body>
 </html>
-
-
