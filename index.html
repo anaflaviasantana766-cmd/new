@@ -1,124 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Email Marketing</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', Arial, sans-serif;
-      background-color: #ffffff;
-    }
-    table {
-      border-spacing: 0;
-      width: 100%;
-    }
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #ffffff;
-    }
-    .header {
-      background: #004aad;
-      padding: 10px;
-      text-align: right;
-    }
-    .header a {
-      color: #ffffff;
-      font-size: 10px;
-      margin-left: 15px;
-      text-decoration: none;
-      font-family: 'Poppins', Arial, sans-serif;
-    }
-    h1 {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 900;
-      font-size: 30px;
-      margin: 0 0 10px 0;
-    }
-    p {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 400;
-      font-size: 17px;
-      margin: 0 0 15px 0;
-      color: #333333;
-    }
-    .btn {
-      background-color: #ff7a00;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-size: 16px;
-      font-family: 'Poppins', Arial, sans-serif;
-      display: inline-block;
-    }
-    .purple-box {
-      background: #e6d6f5;
-      width: 500px;
-      margin: 30px auto;
-      border-radius: 20px;
-      text-align: center;
-      padding: 20px;
-    }
-    .green-box {
-      background: #d5f5d5;
-      width: 500px;
-      margin: 30px auto;
-      border-radius: 20px;
-      text-align: center;
-      padding: 20px;
-    }
-    .top3-title {
-      color: #004aad;
-      text-decoration: none;
-    }
-    .resenha-col {
-      width: 33.3%;
-      padding: 10px;
-    }
-    .aconteceu-item {
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    .footer {
-      background: #004aad;
-      border-radius: 0 0 30px 30px;
-      text-align: center;
-      padding: 20px;
-    }
-    .footer img {
-      width: 24px;
-      margin: 0 5px;
-    }
-    .footer-line {
-      border-top: 1px solid #ffffff;
-      margin: 15px 0;
-    }
-    @media (max-width: 620px) {
-      .two-col {
-        display: block !important;
-      }
-      .two-col td {
-        display: block;
-        width: 100% !important;
-      }
-      .resenha-col {
-        width: 100% !important;
-        display: block;
-      }
+    body{margin:0;padding:0;font-family:'Poppins',Arial,sans-serif;background:#ffffff;}
+    table{border-spacing:0;width:100%;}
+    img{display:block;max-width:100%;height:auto;border:0;outline:none;text-decoration:none;}
+    .container{max-width:600px;margin:0 auto;background:#ffffff;}
+    .header{background:#004aad;padding:10px;text-align:right;}
+    .header a{color:#ffffff;font-size:10px;margin-left:15px;text-decoration:none;font-family:'Poppins',Arial,sans-serif;}
+    h1{font-family:'Poppins',Arial,sans-serif;font-weight:900;font-size:30px;margin:0 0 10px 0;}
+    h2{font-family:'Poppins',Arial,sans-serif;font-weight:700;margin:8px 0;font-size:20px;}
+    p{font-family:'Poppins',Arial,sans-serif;font-weight:400;font-size:17px;margin:0 0 15px 0;color:#333333;line-height:1.45;}
+    .btn{background:#ff7a00;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:25px;font-size:16px;font-family:'Poppins',Arial,sans-serif;display:inline-block;}
+    .purple-box{background:#A1B3F7;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
+    .green-box{background:#d5f5d5;width:500px;margin:30px auto;border-radius:20px;text-align:center;padding:20px;}
+    .top3-title{color:#004aad;text-decoration:none;}
+    .resenha-col{width:33.3%;padding:10px;}
+    .aconteceu-item{padding:20px 0;border-bottom:1px solid #ddd;}
+    .footer{background:#004aad;border-radius:0 0 30px 30px;text-align:center;padding:20px;}
+    .footer img{width:24px;margin:0 5px;}
+    .footer-line{border-top:1px solid #ffffff;margin:15px 0;}
+    @media (max-width:620px){
+      .two-col{display:block!important;}
+      .two-col td{display:block;width:100%!important;}
+      .resenha-col{width:100%!important;display:block;}
+      .purple-box,.green-box{width:100%!important;}
     }
   </style>
 </head>
 <body>
-  <table class="container">
+  <table class="container" role="presentation" cellpadding="0" cellspacing="0" border="0">
     <!-- Cabeçalho -->
     <tr>
       <td class="header">
@@ -131,14 +45,15 @@
     <!-- Bloco Bem-vindo -->
     <tr>
       <td>
-        <table width="100%" class="two-col">
+        <table width="100%" class="two-col" role="presentation">
           <tr>
-            <td style="width:50%; padding:20px;">
-              <h1>Bem vindo ao mês da leitura</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris quam.</p>
+            <td style="width:50%; padding:20px; vertical-align:top;">
+              <h1>Bem-vindo ao Mês da Leitura</h1>
+              <p>Setembro é o mês perfeito para se perder (e se encontrar) nos livros! Preparamos para você uma seleção de conteúdos exclusivos: pré-vendas imperdíveis, resenhas inéditas dos nossos colunistas e novidades que estão movimentando o universo literário.</p>
+              <p>Descubra os favoritos do momento e embarque em novas leituras junto com a gente. 🚀</p>
             </td>
-            <td style="width:50%;">
-              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo">
+            <td style="width:50%; vertical-align:top;">
+              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/bemvindo.png.png" alt="Bem-vindo">
             </td>
           </tr>
         </table>
@@ -147,14 +62,14 @@
 
     <!-- Bloco Roxo -->
     <tr>
-      <td align="center">
-        <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/transicao.png.png" alt="Transição">
+      <td align="center" style="padding:0 10px;">
+        <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/transicao.png.png" alt="Transição">
         <div class="purple-box">
-          <p>Você já conhece o Portal Se Liga na Leitura?  Esse é o nosso espaço dedicado a quem ama ler e quer sempre ter boas recomendações à mão. Ali, você encontra resenhas feitas por um time apaixonado de colunistas, que mergulham fundo nos lançamentos e clássicos para trazer opiniões sinceras e cheias de insights.
-</p>
-          <a href="#" class="btn">Acesse aqui</a>
+          <p>Você já conhece o <strong>Portal Se Liga na Leitura</strong>? Esse é o nosso espaço dedicado a quem ama ler e quer sempre ter boas recomendações à mão. Ali, você encontra resenhas feitas por um time apaixonado de colunistas, que mergulham fundo nos lançamentos e clássicos para trazer opiniões sinceras e cheias de insights.</p>
+          <a href="https://seliganaleitura.com.br/category/portal-de-conteudos/" class="btn">👉 Acesse o Portal e descubra mais</a>
           <br><br>
-          <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/final.png.png" alt="Final" style="max-width:120%; margin-top:15px;">
+          <!-- imagem maior: 120% -->
+          <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/final.png.png" alt="Final" style="max-width:120%; margin-top:15px;">
         </div>
       </td>
     </tr>
@@ -162,12 +77,12 @@
     <!-- Bloco Invertido -->
     <tr>
       <td>
-        <table width="100%" class="two-col">
+        <table width="100%" class="two-col" role="presentation">
           <tr>
-            <td style="width:50%;">
-              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/invertida.png.png" alt="Invertida">
+            <td style="width:50%; vertical-align:top;">
+              <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/invertida.png.png" alt="Invertida">
             </td>
-            <td style="width:50%; padding:20px;">
+            <td style="width:50%; padding:20px; vertical-align:top;">
               <h1>Lorem ipsum</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti.</p>
               <a href="#" class="btn">Confira promoção</a>
@@ -179,68 +94,25 @@
 
     <!-- Bloco Verde - Top 3 Resenhas -->
     <tr>
-      <td align="center">
+      <td align="center" style="padding:0 10px;">
         <div class="green-box">
           <a href="#" class="top3-title"><h1>#Top3resenhas seliga na leitura</h1></a>
-          <table width="100%">
+          <table width="100%" role="presentation">
             <tr>
-              <td class="resenha-col">
-                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/resenha1.png.png" alt="Resenha 1">
+              <td class="resenha-col" align="center" style="vertical-align:top;">
+                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha1.png.png" alt="Resenha 1">
                 <h2>Título Resenha 1</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
               </td>
-              <td class="resenha-col">
-                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/resenha2.png.png" alt="Resenha 2">
+              <td class="resenha-col" align="center" style="vertical-align:top;">
+                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha2.png.png" alt="Resenha 2">
                 <h2>Título Resenha 2</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
               </td>
-              <td class="resenha-col">
-                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/resenha3.png.png" alt="Resenha 3">
+              <td class="resenha-col" align="center" style="vertical-align:top;">
+                <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/resenha3.png.png" alt="Resenha 3">
                 <h2>Título Resenha 3</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </td>
-    </tr>
-
-    <!-- Bloco Aconteceu na Leitura -->
-    <tr>
-      <td style="padding:20px;">
-        <h1>Aconteceu na Leitura</h1>
-        <div class="aconteceu-item">
-          <table width="100%">
-            <tr>
-              <td style="width:40%;"><img src="<!-- trocar imagem -->" alt="Evento 1"></td>
-              <td style="width:60%; padding-left:15px;" align="left">
-                <h2>Título Evento 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" class="btn">Clique aqui</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="aconteceu-item">
-          <table width="100%">
-            <tr>
-              <td style="width:40%;"><img src="<!-- trocar imagem -->" alt="Evento 2"></td>
-              <td style="width:60%; padding-left:15px;" align="left">
-                <h2>Título Evento 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" class="btn">Clique aqui</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="aconteceu-item">
-          <table width="100%">
-            <tr>
-              <td style="width:40%;"><img src="<!-- trocar imagem -->" alt="Evento 3"></td>
-              <td style="width:60%; padding-left:15px;" align="left">
-                <h2>Título Evento 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" class="btn">Clique aqui</a>
               </td>
             </tr>
           </table>
@@ -253,7 +125,7 @@
       <td style="padding:20px;" align="left">
         <p style="color:#999999; font-size:14px;">Resenha destaque do mês</p>
         <h1>Dias Perfeitos - por Juliano Jacob 
-          <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/refs/heads/main/imagens/imagens/juliano.png" alt="Juliano" width="30" style="border-radius:50%; vertical-align:middle;">
+          <img src="https://raw.githubusercontent.com/anaflaviasantana766-cmd/new/main/imagens/imagens/juliano.png" alt="Juliano" width="30" style="border-radius:50%; vertical-align:middle;">
         </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a risus sed leo dictum feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ox_lo6C7ZUA" frameborder="0" allowfullscreen></iframe>
@@ -262,10 +134,56 @@
       </td>
     </tr>
 
+    <!-- Aconteceu na Leitura (placeholders nas imagens) -->
+    <tr>
+      <td style="padding:20px;">
+        <h1>Aconteceu na Leitura</h1>
+
+        <div class="aconteceu-item">
+          <table width="100%" role="presentation">
+            <tr>
+              <td style="width:40%;"><img src="<!-- troque por link raw do evento 1 -->" alt="Evento 1"></td>
+              <td style="width:60%; padding-left:15px;" align="left">
+                <h2>Título Evento 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn">Clique aqui</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="aconteceu-item">
+          <table width="100%" role="presentation">
+            <tr>
+              <td style="width:40%;"><img src="<!-- troque por link raw do evento 2 -->" alt="Evento 2"></td>
+              <td style="width:60%; padding-left:15px;" align="left">
+                <h2>Título Evento 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn">Clique aqui</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="aconteceu-item" style="border-bottom:none;">
+          <table width="100%" role="presentation">
+            <tr>
+              <td style="width:40%;"><img src="<!-- troque por link raw do evento 3 -->" alt="Evento 3"></td>
+              <td style="width:60%; padding-left:15px;" align="left">
+                <h2>Título Evento 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#" class="btn">Clique aqui</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
     <!-- Rodapé -->
     <tr>
       <td class="footer">
-        <!-- Ícones de redes sociais -->
+        <!-- Ícones (trocar por links reais quando tiver) -->
         <a href="#"><img src="<!-- facebook -->" alt="Facebook"></a>
         <a href="#"><img src="<!-- instagram -->" alt="Instagram"></a>
         <a href="#"><img src="<!-- linkedin -->" alt="LinkedIn"></a>
@@ -274,10 +192,11 @@
         <a href="#"><img src="<!-- tiktok -->" alt="TikTok"></a>
 
         <div class="footer-line"></div>
-        <img src="<!-- imagem final rodapé -->" alt="Rodapé imagem">
+        <img src="<!-- imagem final rodapé -->" alt="Rodapé imagem" style="width:200px;">
       </td>
     </tr>
   </table>
 </body>
 </html>
+
 
